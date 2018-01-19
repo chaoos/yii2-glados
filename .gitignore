@@ -1,0 +1,10 @@
+# composer vendor dir
+/vendor
+
+# tmp files, composer binary and package building files
+/debian/tmp
+/debian/bin
+/debian/yii2-glados
+/build-stamp
+/debian/*.debhelper.log
+/debian/*.substvars

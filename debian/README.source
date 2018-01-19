@@ -1,10 +1,28 @@
-yii2 for Debian
+yii2-glados for Debian
 ---------------
 
-<this file describes information about the source package, see Debian policy
-manual section 4.14. You WILL either need to modify or delete this file>
+Copy the newest composer.json file from glados (https://github.com/imedias/glados/tags)
+and extract the minimum-stability, require, and extra parts. For example:
+{
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "^2.0",
+        ...
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
 
+Run "debian/rules get-orig-source" to retrieve the newest source.
 
+Note the versions of the plugins from composer in the changelog (including yiisoft/yii2)
+
+Then build the package with:
+dpkg-buildpackage -us -uc
 
  -- Roman Gruber <roman.gruber@bwzofingen.ch>  Thu, 18 Jan 2018 11:53:31 +0100
-

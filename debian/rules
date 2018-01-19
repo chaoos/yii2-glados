@@ -3,6 +3,8 @@
 #export DH_VERBOSE=1
 
 REVISION := $(shell head -1 debian/changelog | sed 's/.*(//;s/).*//;s/.*-//')
+UPSTREAM_VERSION ?= $(shell dpkg-parsechangelog \
+                          | sed -rne 's/^Version: ([0-9.]+)[-+].*$$/\1/p')
 
 build-arch:
 
@@ -16,8 +18,9 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
-	rm -rf debian/tmp/yii2-2.0.12.orig
+	rm -rf debian/tmp/*
 	rm -f debian/bin/composer
+	rm -f README.md
 	dh_clean
 
 install: build
@@ -45,13 +48,11 @@ binary-arch:
 
 get-orig-source:
 	curl -sS https://getcomposer.org/installer | php -- --install-dir=debian/bin --filename=composer
-	mkdir -p debian/tmp/yii2-2.0.12.orig
-	cp composer.json debian/tmp/yii2-2.0.12.orig/
-	debian/bin/composer --working-dir=debian/tmp/yii2-2.0.12.orig update
-	#debian/bin/composer update
-	tar -czf ../yii2_2.0.12.orig.tar.gz -C debian/tmp yii2-2.0.12.orig
-	mv debian/tmp/yii2-2.0.12.orig/vendor .
-	#rm debian/bin/composer
+	mkdir -p debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig
+	cp composer.json debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig/
+	debian/bin/composer --working-dir=debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig update
+	tar -czf ../yii2-glados_$(UPSTREAM_VERSION).orig.tar.gz -C debian/tmp yii2-glados-$(UPSTREAM_VERSION).orig
+	mv debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig/vendor .
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install get-orig-source
