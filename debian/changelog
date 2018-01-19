@@ -2,7 +2,7 @@ yii2-glados (2.0.13.1-1) unstable; urgency=low
 
   * Initial release
       yiisoft/yii2-composer (2.0.5)
-      fxp/composer-asset-plugin (v1.1.4)
+      fxp/composer-asset-plugin (v1.4.2)
       bower-asset/jquery (3.2.1)
       bower-asset/jquery-timeago (v1.6.1)
       bower-asset/yii2-pjax (2.0.7.1)
@@ -11,7 +11,7 @@ yii2-glados (2.0.13.1-1) unstable; urgency=low
       ezyang/htmlpurifier (v4.9.3)
       bower-asset/inputmask (3.3.11)
       yiisoft/yii2 (2.0.13.1)
-      yiidoc/yii2-timeago (dev-master 8cca4ec): Cloning 8cca4ec224
+      yiidoc/yii2-timeago (dev-master 8cca4ec)
       swiftmailer/swiftmailer (v5.4.8)
       yiisoft/yii2-swiftmailer (2.0.7)
       setasign/fpdi (1.6.2)
@@ -21,8 +21,8 @@ yii2-glados (2.0.13.1-1) unstable; urgency=low
       yiisoft/yii2-bootstrap (2.0.7)
       kartik-v/yii2-krajee-base (v1.8.9)
       kartik-v/yii2-widget-datetimepicker (v1.4.4)
-      kartik-v/yii2-widget-growl (dev-master c79abaa): Cloning c79abaa47e
-      kartik-v/yii2-widget-select2 (dev-master 3276154): Cloning 3276154014
+      kartik-v/yii2-widget-growl (dev-master c79abaa)
+      kartik-v/yii2-widget-select2 (dev-master 3276154)
       bower-asset/highcharts (v6.0.4)
       miloschuman/yii2-highcharts-widget (v6.0)
       bower-asset/blueimp-gallery (v2.29.0)

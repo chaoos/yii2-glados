@@ -18,11 +18,13 @@ and extract the minimum-stability, require, and extra parts. For example:
     }
 }
 
-Run "debian/rules get-orig-source" to retrieve the newest source.
+Remove the vendor dir if present (get-orig-source will download it again), then run
+ debian/rules get-orig-source
+to retrieve the newest source.
 
 Note the versions of the plugins from composer in the changelog (including yiisoft/yii2)
 
 Then build the package with:
-dpkg-buildpackage -us -uc
+ dpkg-buildpackage -us -uc
 
  -- Roman Gruber <roman.gruber@bwzofingen.ch>  Thu, 18 Jan 2018 11:53:31 +0100
