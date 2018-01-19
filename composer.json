@@ -1,0 +1,25 @@
+{
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "^2.0",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "kartik-v/yii2-mpdf": "*",
+        "kartik-v/yii2-widget-datetimepicker": "*",
+        "kartik-v/yii2-widget-growl": "@dev",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "miloschuman/yii2-highcharts-widget": "*",
+        "limion/yii2-jquery-fileupload-widget": "~1.0",
+        "fxp/composer-asset-plugin": "~1.1.3",
+        "yiidoc/yii2-timeago": "dev-master",
+        "yiisoft/yii2-imagine": "~2.0.0",
+        "russ666/yii2-countdown": "*"
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}

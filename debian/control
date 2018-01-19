@@ -1,0 +1,19 @@
+Source: yii2-glados
+Section: unknown
+Priority: optional
+Maintainer: Roman Gruber <roman.gruber@bwzofingen.ch>
+Build-Depends: debhelper (>= 9), curl
+Standards-Version: 3.9.5
+Homepage: http://www.yiiframework.com/
+#Vcs-Git: git://anonscm.debian.org/collab-maint/yii2.git
+Vcs-Browser: https://github.com/yiisoft/yii2
+
+Package: yii2-glados
+Architecture: any
+Depends: 
+Description: yii2 and plugins needed for glados
+ Yii 2 is a modern framework designed to be a solid foundation for your PHP application.
+ .
+ It is fast, secure and efficient and works right out of the box pre-configured with 
+ reasonable defaults. The framework is easy to adjust to meet your needs, because Yii has
+ been designed to be flexible.

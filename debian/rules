@@ -1,0 +1,58 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+REVISION := $(shell head -1 debian/changelog | sed 's/.*(//;s/).*//;s/.*-//')
+
+build-arch:
+
+build: build-indep
+build-indep: build-stamp
+build-stamp:
+	dh_testdir
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	rm -rf debian/tmp/yii2-2.0.12.orig
+	rm -f debian/bin/composer
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	dh_install
+
+# Build architecture-independent files here.
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installdebconf
+	dh_link
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+# Build architecture-dependent files here.
+binary-arch:
+
+get-orig-source:
+	curl -sS https://getcomposer.org/installer | php -- --install-dir=debian/bin --filename=composer
+	mkdir -p debian/tmp/yii2-2.0.12.orig
+	cp composer.json debian/tmp/yii2-2.0.12.orig/
+	debian/bin/composer --working-dir=debian/tmp/yii2-2.0.12.orig update
+	#debian/bin/composer update
+	tar -czf ../yii2_2.0.12.orig.tar.gz -C debian/tmp yii2-2.0.12.orig
+	mv debian/tmp/yii2-2.0.12.orig/vendor .
+	#rm debian/bin/composer
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install get-orig-source
+
