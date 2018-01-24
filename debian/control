@@ -9,7 +9,7 @@ Homepage: http://www.yiiframework.com/
 Vcs-Browser: https://github.com/yiisoft/yii2
 
 Package: yii2-glados
-Architecture: any
+Architecture: all
 Depends: 
 Description: yii2 and plugins needed for glados
  Yii 2 is a modern framework designed to be a solid foundation for your PHP application.
