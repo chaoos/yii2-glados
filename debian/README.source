@@ -22,6 +22,12 @@ Remove the vendor dir if present (get-orig-source will download it again), then 
  debian/rules get-orig-source
 to retrieve the newest source.
 
+Maybe run
+
+ composer global require "fxp/composer-asset-plugin:^1.4.1"
+
+to fix dependency conflicts, with the version given on https://github.com/yiisoft/yii2/tree/master/framework
+
 Note the versions of the plugins from composer in the changelog (including yiisoft/yii2)
 
 Then build the package with:

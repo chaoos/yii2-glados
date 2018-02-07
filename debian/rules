@@ -47,9 +47,11 @@ binary-indep: build install
 binary-arch:
 
 get-orig-source:
+	mkdir -p debian/bin
 	curl -sS https://getcomposer.org/installer | php -- --install-dir=debian/bin --filename=composer
 	mkdir -p debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig
 	cp composer.json debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig/
+	debian/bin/composer global require "fxp/composer-asset-plugin:^1.4.1"
 	debian/bin/composer --working-dir=debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig update
 	tar -czf ../yii2-glados_$(UPSTREAM_VERSION).orig.tar.gz -C debian/tmp yii2-glados-$(UPSTREAM_VERSION).orig
 	mv debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig/vendor .
