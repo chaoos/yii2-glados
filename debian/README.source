@@ -1,5 +1,5 @@
 yii2-glados for Debian
----------------
+----------------------
 
 Copy the newest composer.json file from glados (https://github.com/imedias/glados/tags)
 and extract the "minimum-stability", "require", and "config" parts. For example:
