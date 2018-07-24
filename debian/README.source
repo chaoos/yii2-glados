@@ -2,7 +2,7 @@ yii2-glados for Debian
 ---------------
 
 Copy the newest composer.json file from glados (https://github.com/imedias/glados/tags)
-and extract the minimum-stability, require, and extra parts. For example:
+and extract the "minimum-stability", "require", and "config" parts. For example:
 {
     "minimum-stability": "stable",
     "require": {
@@ -10,13 +10,29 @@ and extract the minimum-stability, require, and extra parts. For example:
         "yiisoft/yii2": "^2.0",
         ...
     },
-    "extra": {
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
         }
     }
 }
+
+Create new entry in debian/changelog as follows:
+
+yii2-glados (<newest yii2 version>-1) unstable; urgency=low
+
+  * New package versions:
+      TODO
+
+ -- Name <email@server.tld>  date
+
+
+Date in the changelog has format:
+ LC_ALL=c date -R
 
 Remove the vendor dir if present (get-orig-source will download it again), then run
  debian/rules get-orig-source
@@ -28,9 +44,11 @@ Maybe run
 
 to fix dependency conflicts, with the version given on https://github.com/yiisoft/yii2/tree/master/framework
 
-Note the versions of the plugins from composer in the changelog (including yiisoft/yii2)
+Note the versions of the plugins from composer in the changelog (including yiisoft/yii2). Generate the list
+of installed packages and their versions with
+ composer show -i
 
 Then build the package with:
  dpkg-buildpackage -us -uc
 
- -- Roman Gruber <roman.gruber@bwzofingen.ch>  Thu, 18 Jan 2018 11:53:31 +0100
+ -- Roman Gruber <roman.gruber@bwzofingen.ch>  Tue, 24 Jul 2018 15:28:33 +0200
