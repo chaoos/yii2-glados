@@ -38,6 +38,7 @@ yii2-glados (2.0.15.1-1) unstable; urgency=low
       yiisoft/yii2                         2.0.15.1           Yii PHP Framework Version 2
       yiisoft/yii2-bootstrap               2.0.8              The Twitter Bootstrap extension for the Yii framework
       yiisoft/yii2-composer                2.0.7              The composer plugin for Yii extension installer
+      yiisoft/yii2-gii                     2.0.7              The Gii extension for the Yii framework
       yiisoft/yii2-imagine                 2.0.4              The Imagine integration for the Yii framework
       yiisoft/yii2-jui                     2.0.7              The Jquery UI extension for the Yii framework
       yiisoft/yii2-swiftmailer             2.0.7              The SwiftMailer integration for the Yii framework
