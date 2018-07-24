@@ -21,6 +21,8 @@ and extract the "minimum-stability", "require", and "config" parts. For example:
     }
 }
 
+Important: Add "yiisoft/yii2-gii": "*" in the "require" part.
+
 Create new entry in debian/changelog as follows:
 
 yii2-glados (<newest yii2 version>-1) unstable; urgency=low
