@@ -23,6 +23,20 @@ and extract the "minimum-stability", "require", and "config" parts. For example:
 
 Important: Add "yiisoft/yii2-gii": "*" in the "require" part.
 
+Important: In the "config" part the paths should point to the current directory:
+
+    "config": {
+        "process-timeout": 1800,
+        "vendor-dir": "vendor",
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        }
+    }
+
+
 Create new entry in debian/changelog as follows:
 
 yii2-glados (<newest yii2 version>-1) unstable; urgency=low
