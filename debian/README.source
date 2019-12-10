@@ -67,4 +67,4 @@ of installed packages and their versions with
 Then build the package with:
  dpkg-buildpackage -us -uc
 
- -- Roman Gruber <roman.gruber@bwzofingen.ch>  Tue, 24 Jul 2018 15:28:33 +0200
+ -- Roman Gruber <roman.gruber@inf.unibe.ch>  Tue, 10 Dec 2019 12:27:13 +0200
