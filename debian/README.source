@@ -50,6 +50,11 @@ yii2-glados (<newest yii2 version>-1) unstable; urgency=low
  -- Name <email@server.tld>  date
 
 
+Get the <newest yii2 version> by
+ composer show "yiisoft/yii2" -all
+
+and take the newest one which is stable.
+
 Date in the changelog has format:
  LC_ALL=c date -R
 
