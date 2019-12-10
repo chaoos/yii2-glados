@@ -1,6 +1,9 @@
 yii2-glados for Debian
 ----------------------
 
+Clone this repo
+git clone https://github.com/chaoos/yii2-glados.git
+
 Copy the newest composer.json file from glados (https://github.com/imedias/glados/tags)
 and extract the "minimum-stability", "require", and "config" parts. For example:
 {
