@@ -58,6 +58,8 @@ and take the newest one which is stable.
 Date in the changelog has format:
  LC_ALL=c date -R
 
+Adjust the newest composer 1.x version in debian/rules under the target get-orig-source from https://getcomposer.org/download/
+
 Remove the vendor dir if present (get-orig-source will download it again), then run
  debian/rules get-orig-source
 to retrieve the newest source.
