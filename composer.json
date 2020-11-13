@@ -23,6 +23,23 @@
         "npm-asset/event-source-polyfill": "*",
         "yiisoft/yii2-gii": "*"
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "videojs/video.js",
+                "version": "7.7.6",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/videojs/video.js/releases/download/v7.7.6/video-js-7.7.6.zip",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "classmap": ["."]
+                }
+            }
+        }
+    ],
     "config": {
         "process-timeout": 1800,
         "vendor-dir": "vendor",

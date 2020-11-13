@@ -5,7 +5,7 @@ Clone this repo
 git clone https://github.com/chaoos/yii2-glados.git
 
 Copy the newest composer.json file from glados (https://github.com/imedias/glados/tags)
-and extract the "minimum-stability", "require", and "config" parts. For example:
+and extract the "minimum-stability", "require", "repositories", and "config" parts. For example:
 {
     "minimum-stability": "stable",
     "require": {
@@ -13,6 +13,23 @@ and extract the "minimum-stability", "require", and "config" parts. For example:
         "yiisoft/yii2": "^2.0",
         ...
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "videojs/video.js",
+                "version": "7.7.6",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/videojs/video.js/releases/download/v7.7.6/video-js-7.7.6.zip",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "classmap": ["."]
+                }
+            }
+        }
+    ],
     "config": {
         "process-timeout": 1800,
         "fxp-asset": {
