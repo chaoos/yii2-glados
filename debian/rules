@@ -48,7 +48,7 @@ binary-arch:
 
 get-orig-source:
 	mkdir -p debian/bin
-	curl -sS https://getcomposer.org/installer | php -- --install-dir=debian/bin --filename=composer --version=1.10.17
+	curl -sS https://getcomposer.org/installer | php -- --install-dir=debian/bin --filename=composer --version=1.10.20
 	mkdir -p debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig
 	cp composer.json debian/tmp/yii2-glados-$(UPSTREAM_VERSION).orig/
 	debian/bin/composer global require "fxp/composer-asset-plugin:^1.4.6"
