@@ -1,10 +1,10 @@
 yii2-glados for Debian
 ----------------------
 
-Clone this repo
+1) Clone this repo
 git clone https://github.com/chaoos/yii2-glados.git
 
-Copy the newest composer.json file from glados (https://github.com/imedias/glados/tags)
+2) Copy the newest composer.json file from glados (https://github.com/imedias/glados/tags)
 and extract the "minimum-stability", "require", "repositories", and "config" parts. For example:
 {
     "minimum-stability": "stable",
@@ -41,9 +41,9 @@ and extract the "minimum-stability", "require", "repositories", and "config" par
     }
 }
 
-Important: Add "yiisoft/yii2-gii": "*" in the "require" part.
+3) Important: Add "yiisoft/yii2-gii": "*" in the "require" part.
 
-Important: In the "config" part the paths should point to the current directory:
+4) Important: In the "config" part the paths should point to the current directory:
 
     "config": {
         "process-timeout": 1800,
@@ -57,7 +57,7 @@ Important: In the "config" part the paths should point to the current directory:
     }
 
 
-Create new entry in debian/changelog as follows:
+5) Create new entry in debian/changelog as follows:
 
 yii2-glados (<newest yii2 version>-1) unstable; urgency=low
 
@@ -67,33 +67,35 @@ yii2-glados (<newest yii2 version>-1) unstable; urgency=low
  -- Name <email@server.tld>  date
 
 
-Get the <newest yii2 version> by
+6) Get the <newest yii2 version> by
  composer show "yiisoft/yii2" -all
 
 and take the newest one which is stable.
 
-Date in the changelog has format:
+7) Date in the changelog has format:
  LC_ALL=c date -R
 
-Adjust the newest composer 1.x version in debian/rules under the target get-orig-source from https://getcomposer.org/download/
+8= Adjust the newest composer 1.x version in debian/rules under the target get-orig-source from https://getcomposer.org/download/
 
-Install curl on the working machine.
+9) Install curl on the working machine.
 
-Remove the vendor dir if present (get-orig-source will download it again), then run
+10) Remove the vendor dir if present (get-orig-source will download it again), then run
  debian/rules get-orig-source
-to retrieve the newest source.
+to retrieve the newest source (may take a while).
 
-Maybe run
+11) Maybe run
 
  composer global require "fxp/composer-asset-plugin:^1.4.1"
 
 to fix dependency conflicts, with the version given on https://github.com/yiisoft/yii2/tree/master/framework
 
-Note the versions of the plugins from composer in the changelog (including yiisoft/yii2). Generate the list
+12) Note the versions of the plugins from composer in the changelog (including yiisoft/yii2). Generate the list
 of installed packages and their versions with
  composer show -i
 
-Then build the package with:
+13) Then build the package with:
  dpkg-buildpackage -us -uc
+
+14) Maybe commit the changes you've made to this repo.
 
  -- Roman Gruber <roman.gruber@inf.unibe.ch>  Tue, 10 Dec 2019 12:27:13 +0200
