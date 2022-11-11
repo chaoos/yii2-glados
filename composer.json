@@ -3,9 +3,9 @@
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "^2.0",
+	"yiisoft/yii2-gii": "*",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "yiisoft/yii2-gii": "*",
         "kartik-v/yii2-mpdf": "*",
         "kartik-v/yii2-widget-datetimepicker": "*",
         "kartik-v/yii2-widget-datepicker": "@dev",
@@ -14,9 +14,9 @@
         "kartik-v/yii2-widget-rangeinput": "*",
         "kartik-v/yii2-widget-switchinput": "dev-master",
         "kartik-v/yii2-dynagrid": "dev-master",
+        "kartik-v/yii2-icons": "@dev",
         "miloschuman/yii2-highcharts-widget": "*",
         "limion/yii2-jquery-fileupload-widget": "~1.0",
-        "fxp/composer-asset-plugin": "^1.4.1",
         "yiidoc/yii2-timeago": "dev-master",
         "yiisoft/yii2-imagine": "~2.0.0",
         "russ666/yii2-countdown": "*",
@@ -24,6 +24,10 @@
         "npm-asset/event-source-polyfill": "*"
     },
     "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
         {
             "type": "package",
             "package": {
@@ -42,12 +46,6 @@
     ],
     "config": {
         "process-timeout": 1800,
-        "vendor-dir": "vendor",
-        "fxp-asset": {
-            "installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            }
-        }
+        "vendor-dir": "vendor"
     }
 }
