@@ -77,6 +77,8 @@ Date in the changelog has format:
 
 Adjust the newest composer 1.x version in debian/rules under the target get-orig-source from https://getcomposer.org/download/
 
+Install curl on the working machine.
+
 Remove the vendor dir if present (get-orig-source will download it again), then run
  debian/rules get-orig-source
 to retrieve the newest source.
