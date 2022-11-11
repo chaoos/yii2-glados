@@ -59,7 +59,7 @@ and extract the "minimum-stability", "require", "repositories", and "config" par
 
 5) Create new entry in debian/changelog as follows:
 
-yii2-glados (<newest yii2 version>-1) unstable; urgency=low
+yii2-glados (<newest yii2 version>.1-1) unstable; urgency=low
 
   * New package versions:
       TODO
