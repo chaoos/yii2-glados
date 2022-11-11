@@ -93,6 +93,8 @@ to fix dependency conflicts, with the version given on https://github.com/yiisof
 of installed packages and their versions with
  composer show -i
 
+If this fails, see https://nono.ma/github-oauth-token-for-github-com-contains-invalid-characters-on-composer-install
+
 13) Then build the package with:
  dpkg-buildpackage -us -uc
 
