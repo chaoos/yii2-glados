@@ -1,7 +1,7 @@
 yii2-glados (2.0.46.1-1) unstable; urgency=low
 
   * New package versions:
-bower-asset/blueimp-canvas-to-blob   v3.29.0
+      bower-asset/blueimp-canvas-to-blob   v3.29.0
       bower-asset/blueimp-file-upload      v9.34.0
       bower-asset/blueimp-gallery          v2.44.0
       bower-asset/blueimp-load-image       v5.16.0
